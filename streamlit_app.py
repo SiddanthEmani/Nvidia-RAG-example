@@ -8,8 +8,8 @@ with st.sidebar:
   if not os.path.exists(DOCS_DIR):
     os.makedirs(DOCS_DIR)
   st.subheader("Add to my Knowledge Base")
-  with st.form("my-form", clear_on_submit = "True"):
-    uploaded_files = st.file_uploader("Upload a file to the Knowledge Base:"), accept_multiple_files = True)
+  with st.form("my-form", clear_on_submit = True):
+    uploaded_files = st.file_uploader("Upload a file to the Knowledge Base:", accept_multiple_files = True)
     submitted = st.form_submit_button("Upload!")
 
   if uploaded_files and submitted:
