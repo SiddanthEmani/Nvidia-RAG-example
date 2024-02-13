@@ -15,7 +15,7 @@ with st.sidebar:
   if uploaded_files and submitted:
     for uploaded_file in uploaded_files:
       st.success(f"File {uploaded_file.name} uploaded successfully")
-      with.open(os.path.join(DOCS_DIR, uploaded_file.name), "wb") as f:
+      with open(os.path.join(DOCS_DIR, uploaded_file.name), "wb") as f:
         f.write(uploaded_file.read())
     
   
